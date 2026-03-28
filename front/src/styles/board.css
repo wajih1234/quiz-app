@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+.leaderboardcontainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7f2 0%, #e8f0e3 100%);
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.leaderboardcontainer h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #1a2e1a;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+.leaderboardcontainer .score-row {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border: 1.5px solid #c8d8c2;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.leaderboardcontainer .score-row:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(61, 139, 61, 0.1);
+}
+
+.leaderboardcontainer .score-row:first-of-type {
+  border-color: #3d8b3d;
+  background: #f0f7ee;
+}
+
+.leaderboardcontainer .score-row span:first-child {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3d8b3d;
+  width: 30px;
+}
+
+.leaderboardcontainer .score-row span:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a2e1a;
+  flex: 1;
+  padding-left: 12px;
+}
+
+.leaderboardcontainer .score-row span:last-child {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3d8b3d;
+}
+
+.leaderboardcontainer .pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 1.5rem;
+}
+
+.leaderboardcontainer .pagination button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #c8d8c2;
+  background: #ffffff;
+  color: #1a2e1a;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.leaderboardcontainer .pagination button:hover {
+  background-color: #3d8b3d;
+  color: white;
+  border-color: #3d8b3d;
+}
+.scorecontainer .btn-logout,
+.leaderboardcontainer .btn-logout {
+  width: 340px;
+  padding: 14px;
+  background-color: transparent;
+  color: #c0392b;
+  border: 1.5px solid #c0392b;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: all 0.2s;
+}
+
+.scorecontainer .btn-logout:hover,
+.leaderboardcontainer .btn-logout:hover {
+  background-color: #c0392b;
+  color: white;
+}

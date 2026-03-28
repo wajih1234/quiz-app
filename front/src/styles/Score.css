@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+.scorecontainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7f2 0%, #e8f0e3 100%);
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.scorecontainer h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #1a2e1a;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.scorecontainer .score-label {
+  font-size: 1rem;
+  color: #6b7c6b;
+  font-weight: 500;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.scorecontainer .score-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  color: #3d8b3d;
+  font-weight: 700;
+  margin: 0.5rem 0 2.5rem;
+  line-height: 1;
+}
+
+
+
+.scorecontainer .btn-secondary {
+  width: 340px;
+  padding: 14px;
+  background-color: transparent;
+  color: #3d8b3d;
+  border: 1.5px solid #3d8b3d;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.scorecontainer .btn-secondary:hover {
+  background-color: #3d8b3d;
+  color: white;
+  transform: translateY(-1px);
+}
