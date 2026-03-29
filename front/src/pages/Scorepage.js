@@ -10,7 +10,7 @@ const Scorepage = () => {
     const fetchScore = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:5100/logic/score/currentuser', {
+        const response = await fetch('https://quiz-app-2lty.onrender.com/logic/score/currentuser' ,{
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,

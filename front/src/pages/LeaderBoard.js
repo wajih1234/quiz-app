@@ -13,7 +13,7 @@ const scoresPerPage = 3;
     const fetchScores = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:5100/logic/score/all', {
+        const response = await fetch('https://quiz-app-2lty.onrender.com/logic/score/all', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,

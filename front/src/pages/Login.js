@@ -15,7 +15,7 @@ const Login = () => {
     if ( !email || !password) return;
 
     try {
-      const response = await fetch('http://localhost:5100/logic/auth/login', {
+      const response = await fetch('https://quiz-app-2lty.onrender.com/logic/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({  email, password }),

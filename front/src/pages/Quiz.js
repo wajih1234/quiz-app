@@ -15,7 +15,7 @@ const navigate = useNavigate();
           
           try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5100/logic/questions/quiz', {
+            const response = await fetch('https://quiz-app-2lty.onrender.com/logic/questions/quiz', {
               method:'GET', 
               headers: { 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ const navigate = useNavigate();
   const questionId = questions[currentIndex]._id;
 
   try {
-    const response = await fetch('http://localhost:5100/logic/questions/answer', {
+    const response = await fetch('https://quiz-app-2lty.onrender.com/logic/questions/answer', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
