@@ -1,7 +1,7 @@
 # Environment variables
 
 back/.env
-
+front/.env
 # Node modules
 node_modules/
 front/node_modules/
