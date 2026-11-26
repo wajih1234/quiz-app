@@ -17,6 +17,7 @@
     "express-rate-limit": "^8.7.5",
     "google-auth-library": "^11.3.4",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.3.3"
+    "mongoose": "^9.3.3",
+    "redis": "^6.4.0"
   }
 }

@@ -1,9 +1,24 @@
 const Question = require("../models/Question");
 const Score = require("../models/Score");
+const { redisClient } = require("../config/redis");
 
-exports.getquestions= async (req, res) => {
+exports.getquestions = async (req, res) => {
   try {
-    const questions = await Question.find({},'question options category');
+    if (redisClient.isReady) {
+      const cached = await redisClient.get('questions');
+      if (cached) {
+        console.log('Questions from Redis');
+        return res.json(JSON.parse(cached));
+      }
+    }
+
+    console.log('Questions from MongoDB');
+    const questions = await Question.find({}, 'question options category');
+
+    if (redisClient.isReady) {
+      await redisClient.set('questions', JSON.stringify(questions), { EX: 3600 });
+    }
+
     res.json(questions);
   } catch (err) {
     res.status(500).send('Server error');

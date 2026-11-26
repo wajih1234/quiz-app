@@ -1,10 +1,11 @@
 const express= require('express');
 const connectDB = require('./config/db');
 const cors = require('cors')
-
+const { connectRedis } = require('./config/redis');
 require('dotenv').config();
 
 connectDB();
+connectRedis();
 //
 const app=express();
 app.set('trust proxy', 1);
