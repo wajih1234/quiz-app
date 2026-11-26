@@ -1,0 +1,29 @@
+services:
+  redis:
+    image: redis:alpine
+
+  backend1:
+    build: ./back
+    env_file: ./back/.env
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+
+  backend2:
+    build: ./back
+    env_file: ./back/.env
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - backend1
+      - backend2
